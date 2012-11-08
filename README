@@ -1,0 +1,33 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4304
+
+*textobj-motionmotion* is a Vim plugin to provide text objets to select a
+piece of text bounded by the cursor positions of the following 2 motions.
+
+For example, an asterisk (*) is used to denote the cursor position:
+>
+  ./runtime/doc/mo*tion.txt
+<
+"vim3bt." will select 'doc/motion' as follows:
+(here (^) indicates the selected texts)
+>
+  ./runtime/doc/motion.txt
+            ^^^^^^^^^^
+<
+Roughly speaking, this plugin makes an operator such that ["^x]c{motion} to
+be able to respond ["x]cim{motion}{motion} (*im* is the default key mapping).
+Hence the name "motionmotion" has been derived from.
+
+Note that this plugin is far from complete. Please use *[range]* or
+*Visual-mode* in the real world!
+
+Requirements:
+- Vim 7.2 or later
+- |textobj-user| 0.3.8 or later  (vimscript#2100) 
+
+Latest version:
+https://github.com/hchbaw/textobj-motionmotion.vim
+
+Document in HTML format:
+http://hchbaw.github.com/experiment/vim/textobj-motionmotion.html
+
+
